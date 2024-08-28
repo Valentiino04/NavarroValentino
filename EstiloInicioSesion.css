@@ -1,0 +1,86 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; 
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor de Login */
+.contenedor-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #222; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Campos del formulario */
+.campo-formulario {
+    margin-bottom: 15px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    color: #9ca3af;
+}
+
+.campo-formulario input {
+    width: 96%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; 
+    color: #fff;
+    font-size: 16px;
+}
+
+.campo-formulario input::placeholder {
+    color: #9ca3af;
+}
+
+/* Botón de submit */
+.campo-formulario button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #22c55e; 
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.campo-formulario button:hover {
+    background-color: #16a34a;
+}
+
+/* Enlaces del formulario */
+.link-formulario {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.link-formulario a {
+    color: #22c55e;
+    text-decoration: none;
+}
+
+.link-formulario a:hover {
+    text-decoration: underline;
+}

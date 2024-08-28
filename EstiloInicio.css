@@ -1,0 +1,211 @@
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #121212; 
+    color: #fff; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: rgb(28, 181, 104);
+    padding: 10px 20px;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Estilos para el botón de registrarse */
+.menu button {
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0;
+    margin: 0 10px;
+}
+
+/* Efecto hover para el botón */
+.menu button:hover {
+    text-decoration: underline;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+}
+.logo-imagen {
+    width: 100px;
+    height: 100px;
+}
+.nombre-logo {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Main */
+main {
+    display: flex;
+}
+
+/* Barra lateral */
+.barra-lateral {
+    background-color: #222;
+    padding: 20px;
+    width: 11%; 
+}
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+.barra-lateral li {
+    margin-bottom: 10px;
+}
+.barra-lateral a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sección de promoción */
+.seccion-promocion {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 10px; 
+    overflow: hidden; 
+    transition: background-color 0.3s ease; 
+    height: 300px; 
+}
+
+.seccion-promocion:hover {
+    background-color: #333; /* Cambia el color de fondo al pasar el ratón */
+}
+
+.seccion-promocion img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.contenido-promocion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    color: #fff;
+    text-align: center;
+}
+
+.contenido-promocion button {
+    background-color: rgb(28, 181, 104); 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contenido-promocion button:hover {
+    background-color: #d00; /* Color más oscuro al pasar el ratón */
+}
+
+
+/* Secciones de contenido */
+.secciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion {
+    background-color: #333;
+    width: 45%;
+    text-align: center;
+    border-radius: 10px; 
+    overflow: hidden; 
+    position: relative; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.seccion:hover {
+    background-color: #444; 
+}
+
+.seccion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.contenido-seccion {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    text-align: center;
+}
+
+.contenido-seccion h2 {
+    font-size: 22px;
+    margin: 0;
+    color: rgb(244, 240, 240);
+}
+
+.contenido-seccion p {
+    font-size: 16px;
+}
+
+.contenido-seccion button {
+    background-color: rgb(28, 181, 104);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contenido-seccion button:hover {
+    background-color: #d00;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+}
