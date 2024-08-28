@@ -1,27 +1,35 @@
-Mapache Gambling
-Mapache Gambling es un proyecto de casino web diseñado para ofrecer una experiencia de juego atractiva y moderna. Este proyecto incluye secciones para listar productos y mostrar detalles específicos de cada uno, con un diseño basado en la estética de casinos populares como Stake.
+# Mapache Gambling
 
-Descripción del Proyecto
-Mapache Gambling es un casino web que ofrece una interfaz de usuario elegante y funcional. La web está diseñada con un esquema de colores oscuros y acentos verdes, siguiendo una estética similar a la de Stake. El proyecto incluye:
+## Descripción
 
-Una página de listado de productos en formato de cajas.
-Una página de detalle de producto con información específica.
-Un diseño responsive que se adapta a diferentes dispositivos.
-Estructura del Proyecto
+**Mapache Gambling** es un proyecto web orientado al entretenimiento, que ofrece secciones dedicadas al casino y a las apuestas deportivas. Los usuarios pueden registrarse, iniciar sesión, y explorar las diferentes secciones del sitio para aprovechar las promociones disponibles, unirse al club VIP, y disfrutar de una experiencia de juego responsable.
 
-Tecnologias Utilizadas:
-HTML5: Proporciona la estructura de las páginas web.
-CSS3: Define el estilo visual del sitio, incluyendo la disposición de los elementos y la personalización del diseño.
-JavaScript: Añade interactividad y funcionalidad dinámica al sitio (por ejemplo, para mejorar la experiencia de búsqueda).
+## Características
 
+- **Barra de Navegación:** Facilita el acceso a la página de inicio de sesión y registro.
+- **Barra Lateral:** Incluye enlaces a secciones como promociones, afiliados, club VIP, blog, foro, patrocinios, juego responsable y soporte en vivo.
+- **Sección de Registro:** Ofrece un acceso rápido para que los usuarios se registren en el sitio.
+- **Sección de Casino:** Permite a los usuarios explorar una amplia selección de juegos de slots.
+- **Sección de Deportes:** Ofrece opciones para apostar en diferentes deportes.
 
-index.html: Página principal del casino web.
-listado_box.html: Página que lista todos los productos en formato de cajas.
-producto.html: Página que muestra los detalles de un producto específico.
-styles.css: Archivo CSS para los estilos del sitio.
+## Tecnologías Utilizadas
 
-Requisitos
-Para ejecutar este proyecto, asegúrate de tener:
+- **HTML5:** Para la estructura básica del sitio web.
+- **CSS3:** Para el diseño y estilo del sitio, utilizando un archivo `EstiloInicio.css`.
+- **Imágenes:** Se utilizan imágenes externas para mejorar la presentación visual de las secciones de promoción, casino y deportes.
 
-Un navegador web  (Chrome, Firefox, etc.).
-Acceso a un servidor web local si deseas ver el proyecto en un entorno de desarrollo.
+## Estructura del Proyecto
+
+- `index.html`: Página principal del sitio web, que contiene la estructura básica y enlaces a las diferentes secciones.
+- `EstiloInicio.css`: Hoja de estilo que controla la apariencia y el diseño de la página principal.
+- `Imagenes/`: Carpeta que contiene las imágenes locales utilizadas en el sitio (por ejemplo, el logo).
+- `InicioSesion.html`: Página para iniciar sesión en el sitio.
+- `Register.html`: Página para registrar una nueva cuenta en el sitio.
+- `Gambling.html`: Página dedicada a los juegos de casino.
+- `Deportes.html`: Página dedicada a las apuestas deportivas.
+
+## Configuración del Entorno
+
+1. **Clonar el Repositorio:**
+   ```bash
+   git clone https://github.com/tu-usuario/mapache-gambling.git
