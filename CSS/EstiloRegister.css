@@ -1,10 +1,10 @@
-/* Estilos generales */
 body {
-    font-family: 'Roboto', sans-serif; 
-    background-color: #121212; 
-    color: #fff; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Para evitar desplazamientos horizontales no deseados */
 }
 
 /* Header */
@@ -19,22 +19,42 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+/* Estilos para los botones de inicio de sesión y registrarse */
+.menu a {
+    text-decoration: none;
+}
+
+.menu button {
+    background-color: rgb(28, 181, 104);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.menu button:hover {
+    background-color: #d00; /* Cambia el color de fondo al pasar el ratón */
+}
+
 .logo-contenedor {
     display: flex;
     align-items: center;
 }
+
 .logo-imagen {
     width: 100px;
     height: 100px;
 }
+
 .nombre-logo {
     font-size: 24px;
     margin-left: 10px;
-}
-.menu a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
 }
 
 /* Main */
@@ -58,6 +78,28 @@ main {
 .barra-lateral a {
     color: #fff;
     text-decoration: none;
+}
+/* Estilos del menú desplegable */
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+}
+
+/* Mostrar el submenú cuando el elemento tiene la clase 'active' */
+li.active .submenu {
+    display: block;
+    opacity: 1;
 }
 
 /* Contenido Principal */

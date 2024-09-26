@@ -5,45 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapache Gambling</title>
-    <link rel="stylesheet" href="EstiloGambling.css">
+    <link rel="stylesheet" href="../CSS/EstiloGambling.css">
+    <link rel="stylesheet" href="../CSS/EstiloInicio.css">
 </head>
 
 <body>
     <!-- Header -->
-         <!-- Header -->
-         <header>
-            <!-- Barra de navegación -->
-            <div class="barra-navegacion">
-                <div class="logo-contenedor">
-                    <img src="Imagenes/Logo.png" alt="Logo Mapache" class="logo-imagen">
-                    <div class="nombre-logo">Mapache Gambling</div>
-                </div>
-                <div class="menu">
-                    <a href="InicioSesion.html">
-                        <button>Inicia Sesion</button>
-                    </a>
-                    <a href="Register.html">
-                        <button>Registrarse</button>
-                    </a>
-                </div>
+    <header>
+        <!-- Barra de navegación -->
+        <div class="barra-navegacion">
+            <div class="logo-contenedor">
+                <a href="../Index.html">
+                    <img src="../Imagenes/Logo.png" alt="Logo Mapache" class="logo-imagen">
+                </a>
+                <div class="nombre-logo" id="casinoTitulo"></div> <!-- Título con efecto -->
             </div>
-        </header>
+            <div class="menu">
+                <a href="../Html/InicioSesion.html">
+                    <button type="button">Inicia Sesion</button>
+                </a>
+                <a href="../Html/Register.html">
+                    <button type="button">Registrarse</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
     <!-- Main -->
     <main>
-        <!-- Barra lateral -->
+        <!-- Contenedor de fichas flotantes -->
+        <div id="fichas"></div>
+
         <div class="barra-lateral">
             <ul>
-                <li><a href="#">Promociones</a></li>
-                <li><a href="#">Afiliado</a></li>
-                <li><a href="#">Club VIP</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Foro</a></li>
-                <li><a href="#">Patrocinios</a></li>
-                <li><a href="#">Juego Responsable</a></li>
-                <li><a href="#">Soporte en Vivo</a></li>
-                <li><a href="#">Idioma: Español</a></li>
+                <li class="menu-desplegable">
+                    <a href="#">Menú Principal</a>
+                    <ul class="submenu">
+                        <li><a href="#">Promociones</a></li>
+                        <li><a href="#">Afiliado</a></li>
+                        <li><a href="#">Club VIP</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Foro</a></li>
+                        <li><a href="#">Patrocinios</a></li>
+                        <li><a href="#">Juego Responsable</a></li>
+                        <li><a href="#">Soporte en Vivo</a></li>
+                        <li><a href="#">Idioma: Español</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-desplegable">
+                    <a href="#">Juegos</a>
+                    <ul class="submenu">
+                        <li><a href="#">Slots</a></li>
+                        <li><a href="#">Ruleta</a></li>
+                        <li><a href="#">Blackjack</a></li>
+                        <li><a href="#">Póker</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
+
 
     <!-- Sección Principal -->
     <div class="contenido-principal">
@@ -94,5 +115,41 @@
     <footer>
         <p>&copy; 2024 Mapache Gambling. Todos los derechos reservados.</p>
     </footer>
+    <!-- Script para el menú desplegable y carrusel -->
+    <script>
+        // Animación del título con efecto "typewriter"
+        const tituloTexto = "Mapache Gambling";
+        let index = 0;
+
+        function escribirTitulo() {
+            if (index < tituloTexto.length) {
+                document.getElementById("casinoTitulo").innerHTML += tituloTexto.charAt(index);
+                index++;
+                setTimeout(escribirTitulo, 150);
+            }
+        }
+         // Funcionalidad para el menú desplegable
+         document.querySelectorAll('.menu-desplegable').forEach(function (menu) {
+            menu.addEventListener('click', function () {
+                this.classList.toggle('active');
+            });
+        });
+
+
+        window.onload = function () {
+            escribirTitulo();
+
+
+            
+        }
+
+       
+
+        
+    </script>
+</body>
+
+</html>
+
 </body>
 </html>

@@ -1,0 +1,287 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Para evitar desplazamientos horizontales no deseados */
+}
+
+/* Header */
+header {
+    background-color: rgb(28, 181, 104);
+    padding: 10px 20px;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para los botones de inicio de sesión y registrarse */
+.menu a {
+    text-decoration: none;
+}
+
+.menu button {
+    background-color: rgb(28, 181, 104);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.menu button:hover {
+    background-color: #d00; /* Cambia el color de fondo al pasar el ratón */
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+}
+
+.logo-imagen {
+    width: 100px;
+    height: 100px;
+}
+
+.nombre-logo {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: row; /* Para mantener la barra lateral a la izquierda */
+    padding: 0;
+}
+
+/* Barra lateral */
+.barra-lateral {
+    background-color: #222;
+    padding: 20px;
+    width: 15%; /* Ajuste del ancho */
+    min-width: 200px; /* Asegura que no se haga demasiado pequeña */
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.barra-lateral li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.barra-lateral a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos del menú desplegable */
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+}
+
+/* Mostrar el submenú cuando el elemento tiene la clase 'active' */
+li.active .submenu {
+    display: block;
+    opacity: 1;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex: 1;
+    padding: 0 20px; /* Agregar espacio a los lados */
+    position: relative;
+    z-index: 2; /* Para que esté por encima de las fichas flotantes */
+    width: 100%;
+}
+
+/* Sección de promoción */
+.seccion-promocion {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    height: 300px;
+}
+
+/* Carrusel de imágenes */
+.seccion-promocion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+}
+
+.contenido-promocion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+.contenido-promocion button {
+    background-color: rgb(28, 181, 104);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contenido-promocion button:hover {
+    background-color: #d00; /* Color más oscuro al pasar el ratón */
+}
+
+/* Secciones de contenido */
+.secciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las secciones */
+    margin-top: 20px;
+}
+
+.seccion {
+    background-color: #333;
+    width: 49%; /* Ambas secciones ocupan el 49% del ancho */
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 300px;
+}
+
+.seccion:hover {
+    background-color: #444;
+}
+
+.seccion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido-seccion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+.contenido-seccion h2 {
+    font-size: 22px;
+    margin: 0;
+    color: rgb(244, 240, 240);
+}
+
+.contenido-seccion p {
+    font-size: 16px;
+}
+
+.contenido-seccion button {
+    background-color: rgb(28, 181, 104);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contenido-seccion button:hover {
+    background-color: #d00;
+}
+
+/* Fichas flotantes */
+#fichas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Fichas detrás del contenido */
+    pointer-events: none; /* Para que no interfieran con los clics */
+}
+
+.ficha {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../Imagenes/Ficha.png');
+    background-size: cover;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: flotar 10s infinite ease-in-out;
+}
+
+/* Animación para las fichas */
+@keyframes flotar {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+}
+
+/* Altura del documento */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
