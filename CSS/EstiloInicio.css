@@ -285,3 +285,34 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    .secciones {
+        flex-direction: column;
+    }
+
+    .seccion {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .barra-lateral {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .logo-imagen {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nombre-logo {
+        font-size: 18px;
+    }
+}

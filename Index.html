@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapache Gambling</title>
-    <link rel="stylesheet" href="../Proyecto PIII.Navarro/CSS/EstiloInicio.css">
+    <link rel="stylesheet" href="../Proyecto PIII.Navarro/CSS/EstiloInicio.css"> <!-- Enlazando el archivo CSS -->
 </head>
 
 <body>
@@ -20,10 +20,10 @@
                 <div class="nombre-logo" id="casinoTitulo"></div> <!-- Título con efecto -->
             </div>
             <div class="menu">
-                <a href="../Proyecto PIII.Navarro/Html/InicioSesion.html">
+                <a href="InicioSesion.html">
                     <button type="button">Inicia Sesion</button>
                 </a>
-                <a href="../Proyecto PIII.Navarro/Html/Register.html">
+                <a href="Register.html">
                     <button type="button">Registrarse</button>
                 </a>
             </div>
@@ -71,7 +71,7 @@
                 <img src="https://images4.alphacoders.com/133/1338472.png" alt="Promoción 1" class="imagen-carrusel activa">
                 <img src="https://plus.unsplash.com/premium_photo-1681469490587-cf7ff1d6fc00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9uZG8lMjBkZSUyMGRpbmVyb3xlbnwwfHwwfHx8MA%3D%3D" alt="Promoción 2" class="imagen-carrusel">
                 <div class="contenido-promocion">
-                    <a href="../Proyecto PIII.Navarro/Html/Register.html">
+                    <a href="Register.html">
                         <button class="efecto-boton">Regístrate Ahora</button>
                     </a>
                 </div>
@@ -84,7 +84,7 @@
                     <div class="contenido-seccion">
                         <h2>Casino</h2>
                         <p>Explora nuestra amplia selección de juegos de slots.</p>
-                        <a href="../Proyecto PIII.Navarro/Html/Gambling.html">
+                        <a href="Gambling.html">
                             <button class="efecto-boton">Ir al Casino</button>
                         </a>
                     </div>
@@ -94,7 +94,7 @@
                     <div class="contenido-seccion">
                         <h2>Deportes</h2>
                         <p>Apuesta en tus deportes favoritos.</p>
-                        <a href="../Proyecto PIII.Navarro/Html/Deportes.html">
+                        <a href="Deportes.html">
                             <button class="efecto-boton">Ir a Deportes</button>
                         </a>
                     </div>
@@ -109,65 +109,7 @@
     </footer>
 
     <!-- Script para el menú desplegable y carrusel -->
-    <script>
-        // Animación del título con efecto "typewriter"
-        const tituloTexto = "Mapache Gambling";
-        let index = 0;
-
-        function escribirTitulo() {
-            if (index < tituloTexto.length) {
-                document.getElementById("casinoTitulo").innerHTML += tituloTexto.charAt(index);
-                index++;
-                setTimeout(escribirTitulo, 150);
-            }
-        }
-
-        window.onload = function () {
-            escribirTitulo();
-
-            // Generar fichas flotantes
-            const numFichas = 20;
-            const fichasContainer = document.getElementById('fichas');
-
-            for (let i = 0; i < numFichas; i++) {
-                const ficha = document.createElement('div');
-                ficha.classList.add('ficha');
-                ficha.style.left = Math.random() * 100 + 'vw';
-                ficha.style.animationDuration = Math.random() * 10 + 5 + 's';
-                fichasContainer.appendChild(ficha);
-            }
-
-            // Iniciar el carrusel después de cargar la página
-            iniciarCarrusel();
-        }
-
-        // Funcionalidad para el menú desplegable
-        document.querySelectorAll('.menu-desplegable').forEach(function (menu) {
-            menu.addEventListener('click', function () {
-                this.classList.toggle('active');
-            });
-        });
-
-        // Carrusel básico
-        const imagenes = document.querySelectorAll('.imagen-carrusel');
-        let imagenActual = 0;
-
-        function mostrarSiguienteImagen() {
-            imagenes.forEach((img, index) => {
-                img.style.display = 'none'; // Ocultar todas las imágenes
-            });
-
-            imagenActual = (imagenActual + 1) % imagenes.length; // Avanzar al siguiente índice
-            imagenes[imagenActual].style.display = 'block'; // Mostrar la siguiente imagen
-        }
-
-        function iniciarCarrusel() {
-            // Inicializa la primera imagen
-            imagenes[0].style.display = 'block';
-
-            setInterval(mostrarSiguienteImagen, 3000); // Cambiar imagen cada 3 segundos
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
